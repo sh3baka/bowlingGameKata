@@ -3,12 +3,12 @@ package lv.shebaka.bowlingGameKata;
 public class Game {
     private int[] rolls = new int[20];
     private int currentRoll = 0;
-    public boolean inGame = true;
+    public boolean gameOver = false;
     public String errorMsg;
 
     public void roll(int pinCount) {
         if (isViableForGame(pinCount))
-        rolls[currentRoll++] = pinCount;
+            rolls[currentRoll++] = pinCount;
         else {
             errorMsg = "Wrong number";
             System.out.println(errorMsg);
@@ -54,7 +54,7 @@ public class Game {
     private boolean isSpare(int frameIndex) {
         return rolls[frameIndex] + rolls[frameIndex + 1] == 10;
     }
-    
+
     private boolean isViableForGame(int pins) {
         return pins >= 0 && pins <= 10;
     }
