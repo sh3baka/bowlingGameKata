@@ -49,6 +49,21 @@ public class GameTest {
         assertEquals(300, game.score());
     }
 
+    @Test
+    public void testViablePinCount() {
+        game.roll(5);
+
+        assertEquals(5, game.score());
+    }
+
+    @Test
+    public void testErrorMessageWhenPinCountNotViable() {
+        game.roll(15);
+
+        assertEquals("Wrong number", game.errorMsg);
+        assertEquals(0, game.score());
+    }
+
     private void rollStrike() {
         game.roll(10);
     }
