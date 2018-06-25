@@ -1,7 +1,7 @@
 package lv.shebaka.bowlingGameKata;
 
 public class Game {
-    private int[] rolls = new int[21];
+    private int[] rolls = new int[20];
     private int currentRoll = 0;
     public boolean inGame = true;
     public String errorMsg;
@@ -9,9 +9,10 @@ public class Game {
     public void roll(int pinCount) {
         if (isViableForGame(pinCount))
         rolls[currentRoll++] = pinCount;
-        else
+        else {
             errorMsg = "Wrong number";
             System.out.println(errorMsg);
+        }
     }
 
     public int score() {

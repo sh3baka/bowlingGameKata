@@ -12,7 +12,5 @@ public class BowlingGame {
             System.out.println("Roll: ");
             game.roll(scanner.nextInt());
         }
-
-
     }
 }
