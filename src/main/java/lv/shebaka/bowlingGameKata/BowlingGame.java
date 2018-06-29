@@ -7,7 +7,7 @@ public class BowlingGame {
         Game game = new Game();
         Scanner scanner = new Scanner(System.in);
 
-        while (!game.gameOver) {
+        while (!game.isOver) {
             System.out.println("Score: " + game.score());
             System.out.println("Roll: ");
             game.roll(scanner.nextInt());

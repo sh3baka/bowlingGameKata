@@ -3,7 +3,7 @@ package lv.shebaka.bowlingGameKata;
 public class Game {
     private int[] rolls = new int[20];
     private int currentRoll = 0;
-    public boolean gameOver = false;
+    public boolean isOver = false;
     public String errorMsg;
 
     public void roll(int pinCount) {
